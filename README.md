@@ -86,30 +86,30 @@ More docs: see the `docs/` folder:
 
 Legend: ✅ shipped · ▶ partial · ⏳ planned · 💤 deferred
 
-| Area | State | Notes |
+| <sub>Area</sub> | <sub>State</sub> | <sub>Notes</sub> |
 |------|-------|-------|
-| Transparency (trace, dry-run, receipts, journal, plan/mirror) | ✅ | Receipts include verification + hybrid extras |
-| Zero‑trust policy broker | ✅ | allow-command/path, doctor, trust tokens |
-| Code indexing (file + Tree-sitter symbols) | ✅ | AST-based precision parsing for TS/JS/Python with heuristic fallback |
-| Hybrid search (FTS + vector rerank) | ✅ | ANN acceleration roadmap |
-| Air‑gapped export/import | ✅ | Dir or zip, per‑file checksums, signing, provenance |
-| Per‑file checksums + precedence | ✅ | Exit 4 checksum > signature mismatch |
-| Signing & key rotation/archive | ✅ | key rotate/status/list/prune; archived keys stored |
-| Provenance metadata | ✅ | Exporter version/node/host + keyId in manifest |
-| Path redaction guard | ✅ | Removes sensitive absolute prefixes in receipts |
-| Replay (basic) | ▶ | Time‑travel deferred |
-| Usage-based nudges | ⏳ | usage.json scaffold not yet |
-| Tree‑sitter precision | ✅ | AST-based symbol extraction for TypeScript/JavaScript/Python |
-| ANN / approximate vectors | ⏳ | Next performance upgrade after Tree-sitter |
-| Merge/diff import preview | ⏳ | Pro feature roadmap |
-| Time-travel replay | 💤 | Post ANN + symbol precision |
+| <sub>Transparency (trace, dry-run, receipts, journal, plan/mirror)</sub> | <sub>✅</sub> | <sub>Receipts include verification + hybrid extras</sub> |
+| <sub>Zero‑trust policy broker</sub> | <sub>✅</sub> | <sub>allow-command/path, doctor, trust tokens</sub> |
+| <sub>Code indexing (file + Tree-sitter symbols)</sub> | <sub>✅</sub> | <sub>AST-based precision parsing for TS/JS/Python with heuristic fallback</sub> |
+| <sub>Hybrid search (FTS + vector rerank)</sub> | <sub>✅</sub> | <sub>ANN acceleration roadmap</sub> |
+| <sub>Air‑gapped export/import</sub> | <sub>✅</sub> | <sub>Dir or zip, per‑file checksums, signing, provenance</sub> |
+| <sub>Per‑file checksums + precedence</sub> | <sub>✅</sub> | <sub>Exit 4 checksum > signature mismatch</sub> |
+| <sub>Signing & key rotation/archive</sub> | <sub>✅</sub> | <sub>key rotate/status/list/prune; archived keys stored</sub> |
+| <sub>Provenance metadata</sub> | <sub>✅</sub> | <sub>Exporter version/node/host + keyId in manifest</sub> |
+| <sub>Path redaction guard</sub> | <sub>✅</sub> | <sub>Removes sensitive absolute prefixes in receipts</sub> |
+| <sub>Replay (basic)</sub> | <sub>▶</sub> | <sub>Time‑travel deferred</sub> |
+| <sub>Usage-based nudges</sub> | <sub>⏳</sub> | <sub>usage.json scaffold not yet</sub> |
+| <sub>Tree‑sitter precision</sub> | <sub>✅</sub> | <sub>AST-based symbol extraction for TypeScript/JavaScript/Python</sub> |
+| <sub>ANN / approximate vectors</sub> | <sub>⏳</sub> | <sub>Next performance upgrade after Tree-sitter</sub> |
+| <sub>Merge/diff import preview</sub> | <sub>⏳</sub> | <sub>Pro feature roadmap</sub> |
+| <sub>Time-travel replay</sub> | <sub>💤</sub> | <sub>Post ANN + symbol precision</sub> |
 
 Integrity Exit Codes (import-context):
-| Code | Meaning |
+| <sub>Code</sub> | <sub>Meaning</sub> |
 |------|---------|
-| 2 | Blocked: unsigned bundle (policy requires signature) |
-| 3 | Invalid signature (cryptographic failure) |
-| 4 | Checksum mismatch (file tampered/corrupt) |
+| <sub>2</sub> | <sub>Blocked: unsigned bundle (policy requires signature)</sub> |
+| <sub>3</sub> | <sub>Invalid signature (cryptographic failure)</sub> |
+| <sub>4</sub> | <sub>Checksum mismatch (file tampered/corrupt)</sub> |
 
 Symbol Mode: Tree-sitter AST parsing provides precise language-aware symbol segmentation for TypeScript, JavaScript, and Python. Falls back to heuristic parsing when Tree-sitter is unavailable. Significantly improves recall accuracy over regex-based approaches.
 
